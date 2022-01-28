@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            button{
+                width:150px;
+                height:70px;
+                font-size:20px;
+                position:absolute;
+                left:50%;
+                top:50%;
+                transform:translate(-50%,50%)
+            }
+        </style>
+    </head>
+    <body>
+        <center><button>클릭하세요</button></center>
+        <script>
+
+            var n=0;
+            var i=0;
+
+            function start(){
+                var c;
+                n++;
+                if (n>6) n=1;
+                switch (n){
+                    case 1: c="00f"; break;
+                    case 2: c="f00"; break;
+                    case 3: c="ff0"; break;
+                    case 4: c="0f0"; break;
+                    case 5: c="000"; break;
+                    case 6: c="fff"; break;
+                }
+
+                $('html').css("background",'#'+c);
+                if (i>=50) window.close()
+                i++;
+            }
+
+            $('button').click(function(){
+                const element=document.documentElement;
+                $('button').css('display','none');
+                if(element.requestFullScreen) {
+                element.requestFullScreen();
+                } else if(element.webkitRequestFullScreen ) {
+                element.webkitRequestFullScreen();
+                } else if(element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+                } else if (element.msRequestFullscreen) {
+                element.msRequestFullscreen();
+                }
+                var play=setInterval(start,80);
+            });
+
+        </script>
+    </body>
+</html>
