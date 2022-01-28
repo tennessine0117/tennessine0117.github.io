@@ -34,9 +34,9 @@
                     case 5: c="000"; break;
                     case 6: c="fff"; break;
                 }
-
+                
+                if (i>=50) c="000";
                 $('html').css("background",'#'+c);
-                if (i>=50) self.close()
                 i++;
             }
 
