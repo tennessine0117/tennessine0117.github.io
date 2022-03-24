@@ -237,6 +237,7 @@
         }
     </style>
 <button id="mbtirate">퍼센티지 변경</button>
+<button id="mbtirandom">랜덤</button>
 
 
 <script>
@@ -357,6 +358,178 @@
         var result=prompt("자기주장형(A) 입력 : (0~49, 51~100의 자연수만)");
         result=result-result%1
         if (result==50 || result<0 || result>100) return 0;
+        if (result>50){
+            if ($('#AP').hasClass('right-fill')){
+                $('#AP').removeClass('right-fill');
+                $('#AP').addClass('left-fill');
+            }
+            $('.a5').css('color','#F25E62');
+            $('.b5.percentage').css('color','#51596A');
+            $('.b5.title').css('color','#9B9FAA');
+            var alp5='a'
+        }
+        if (result<50){
+            if ($('#AP').hasClass('left-fill')){
+                $('#AP').removeClass('left-fill');
+                $('#AP').addClass('right-fill');
+            }
+            $('.b5').css('color','#F25E62');
+            $('.a5.percentage').css('color','#51596A');
+            $('.a5.title').css('color','#9B9FAA');
+            var alp5='t'
+        }
+        $('#AC').css("width",result+"%")
+        $('.a5.percentage').text(result+"%");
+        $('.b5.percentage').text((100-result)+"%");
+
+        var mbti1=alp1+alp2+alp3+alp4;
+        var mbti2=mbti1+'-'+alp5
+
+        var blue="#4298B4"
+        var yellow="#E4AE3A"
+        var green="#33A474"
+        var purple="#88619A"
+
+        switch(mbti1){
+            case 'intj': var mbti3="용의주도한 전략가"; var color=purple; break;
+            case 'intp': var mbti3="논리적인 사색가"; var color=purple; break;
+            case 'entj': var mbti3="대담한 통솔자"; var color=purple; break;
+            case 'entp': var mbti3="뜨거운 논쟁을 즐기는 변론가"; var color=purple; break;
+            case 'infj': var mbti3="선의의 옹호자"; var color=green; break;
+            case 'infp': var mbti3="열정적인 중재자"; var color=green; break;
+            case 'enfj': var mbti3="정의로운 사회운동가"; var color=green; break;
+            case 'enfp': var mbti3="재기발랄한 활동가"; var color=green; break;
+            case 'istj': var mbti3="청렴결백한 논리주의자"; var color=blue; break;
+            case 'isfj': var mbti3="용감한 수호자"; var color=blue; break;
+            case 'estj': var mbti3="엄격한 관리자"; var color=blue; break;
+            case 'esfj': var mbti3="사교적인 외교관"; var color=blue; break;
+            case 'istp': var mbti3="만능 재주꾼"; var color=yellow; break;
+            case 'isfp': var mbti3="호기심 많은 예술가"; var color=yellow; break;
+            case 'estp': var mbti3="모험을 즐기는 사업가"; var color=yellow; break;
+            case 'esfp': var mbti3="자유로운 영혼의 연예인"; var color=yellow; break;
+        }
+        
+        $('.type-name').text(mbti3);
+        $('title').text('성격유형 : “'+mbti3+'”('+mbti1+') | 16Personalities');
+        $('.type-code').text(mbti2);
+        $('.image').css("display",'none');
+        $('.'+mbti1).css("display","inline");
+        $('.type-code').css("color", color);
+        $('polygon').css("fill", color);
+        
+    });
+
+    $('#mbtirandom').click(function(){
+        var result=Math.floor(Math.random() * 100);
+        if (result>=50) result++;
+        if (result>50){
+            if ($('#EP').hasClass('right-fill')){
+                $('#EP').removeClass('right-fill');
+                $('#EP').addClass('left-fill');
+            }
+            $('.a1').css('color','#4298B4');
+            $('.b1.percentage').css('color','#51596A');
+            $('.b1.title').css('color','#9B9FAA');
+            var alp1='e'
+        }
+        if (result<50){
+            if ($('#EP').hasClass('left-fill')){
+                $('#EP').removeClass('left-fill');
+                $('#EP').addClass('right-fill');
+            }
+            $('.b1').css('color','#4298B4');
+            $('.a1.percentage').css('color','#51596A');
+            $('.a1.title').css('color','#9B9FAA');
+            var alp1='i'
+        }
+        $('#EC').css("width",result+"%")
+        $('.a1.percentage').text(result+"%");
+        $('.b1.percentage').text((100-result)+"%");
+
+
+        var result=Math.floor(Math.random() * 100);
+        if (result>=50) result++;
+        if (result>50){
+            if ($('#NP').hasClass('right-fill')){
+                $('#NP').removeClass('right-fill');
+                $('#NP').addClass('left-fill');
+            }
+            $('.a2').css('color','#E4AE34');
+            $('.b2.percentage').css('color','#51596A');
+            $('.b2.title').css('color','#9B9FAA');
+            var alp2='n'
+        }
+        if (result<50){
+            if ($('#NP').hasClass('left-fill')){
+                $('#NP').removeClass('left-fill');
+                $('#NP').addClass('right-fill');
+            }
+            $('.b2').css('color','#E4AE34');
+            $('.a2.percentage').css('color','#51596A');
+            $('.a2.title').css('color','#9B9FAA');
+            var alp2='s'
+        }
+        $('#NC').css("width",result+"%")
+        $('.a2.percentage').text(result+"%");
+        $('.b2.percentage').text((100-result)+"%");
+
+
+        var result=Math.floor(Math.random() * 100);
+        if (result>=50) result++;
+        if (result>50){
+            if ($('#TP').hasClass('right-fill')){
+                $('#TP').removeClass('right-fill');
+                $('#TP').addClass('left-fill');
+            }
+            $('.a3').css('color','#33A474');
+            $('.b3.percentage').css('color','#51596A');
+            $('.b3.title').css('color','#9B9FAA');
+            var alp3='t'
+        }
+        if (result<50){
+            if ($('#TP').hasClass('left-fill')){
+                $('#TP').removeClass('left-fill');
+                $('#TP').addClass('right-fill');
+            }
+            $('.b3').css('color','#33A474');
+            $('.a3.percentage').css('color','#51596A');
+            $('.a3.title').css('color','#9B9FAA');
+            var alp3='f'
+        }
+        $('#TC').css("width",result+"%")
+        $('.a3.percentage').text(result+"%");
+        $('.b3.percentage').text((100-result)+"%");
+
+
+        var result=Math.floor(Math.random() * 100);
+        if (result>=50) result++;
+        if (result>50){
+            if ($('#JP').hasClass('right-fill')){
+                $('#JP').removeClass('right-fill');
+                $('#JP').addClass('left-fill');
+            }
+            $('.a4').css('color','#88619A');
+            $('.b4.percentage').css('color','#51596A');
+            $('.b4.title').css('color','#9B9FAA');
+            var alp4='j'
+        }
+        if (result<50){
+            if ($('#JP').hasClass('left-fill')){
+                $('#JP').removeClass('left-fill');
+                $('#JP').addClass('right-fill');
+            }
+            $('.b4').css('color','#88619A');
+            $('.a4.percentage').css('color','#51596A');
+            $('.a4.title').css('color','#9B9FAA');
+            var alp4='p'
+        }
+        $('#JC').css("width",result+"%")
+        $('.a4.percentage').text(result+"%");
+        $('.b4.percentage').text((100-result)+"%");
+
+
+        var result=Math.floor(Math.random() * 100);
+        if (result>=50) result++;
         if (result>50){
             if ($('#AP').hasClass('right-fill')){
                 $('#AP').removeClass('right-fill');
