@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+	<meta charset="UTF-8" name="viewport">
+	<title>의류 폐기물 종량제</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+  
+<style>
+
+	body{
+		width:1500px;
+		overflow:auto;
+		line-height:150%;
+		background:linear-gradient( to bottom, rgb(255,255,255), rgb(233, 236, 243) );
+		margin:0 auto;
+	}
+
+	#p{
+		font-size:17px;
+	}
+
+	.navbar{
+		background-color:rgba(253,255,253,0);
+		overflow:auto;
+		padding-top:25px;
+	}
+
+	.navbar-brand{
+		font-size:27px;
+		height:65px;
+		margin-top:6px;
+	}
+
+	#home{
+		transition:font-size 0.2s;
+		text-decoration:none;
+		cursor:pointer
+	}
+	#home:hover{
+		font-size:35px;
+	}
+
+	.nav{
+		padding-top:7px;
+		font-size:16px;
+	}
+
+	li>a{
+		margin-left:10px;
+		margin-right:10px;
+		transition:font-size 0.2s;
+		text-decoration:none;
+		cursor:pointer
+	}
+	li>a:hover {
+		font-size:20px;
+	}
+
+	.navbar-text{
+		padding-top:6px;
+		float:right;
+	}
+
+	#j1{
+		width:1300px;
+		height:300px;
+		padding-top:25px;
+		margin-left:100px;
+		margin-top:40px;
+		background-color:rgba(0,0,0,0);
+	}
+
+	#j2{
+		width:1300px;
+		height:350px;
+		padding-top:25px;
+		margin-left:100px;
+		margin-top:40px;
+		background-color:rgba(0,0,0,0);
+	}
+
+	#pic1 {
+		animation-name:appear;
+		animation-duration:1.0s;
+		width:250px;
+		height:250px;
+		float:left;
+		margin-right:20px;
+		margin-left:20px;
+	}
+
+	#pic2 {
+		animation-name:appear;
+		animation-duration:1.0s;
+		width:225px;
+		height:300px;
+		float:left;
+		margin-right:35px;
+		margin-left:20px;
+	}
+
+	@keyframes appear{
+		from{opacity:0%}
+		to{opacity:100%}
+	}
+
+	h2{
+		margin-top:50px;
+	}
+
+	li{
+		font-size:120%;
+		line-height:25px;
+	}
+
+	#cr{
+		margin-top:50px;
+		font-size:11px;
+	}
+
+	.btn-link{
+		font-size:18px;
+		width:180px;
+		margin-top:30px;
+		position:relative;
+		left:50%;
+		transform: translateX(-50%);
+	}
+	
+	#disqus_thread{
+		margin:100px;
+	}
+
+</style>
+  
+<body>
+	<nav class="navbar navbar-light bg-primary">
+		<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" id="home" onClick="cli()">대충사이트이름</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><a href="https://www.youtube.com/watch?v=o_i4Ih4ZR24">폐기량 조회</a></li>
+			<li><a href="https://www.youtube.com/watch?v=o_i4Ih4ZR24">페이지 정보</a></li>
+			<li><a href="https://www.youtube.com/watch?v=o_i4Ih4ZR24">정책 현황</a></li>
+			<li><a href="https://yghhyperstupid.github.io/donation">후원</a></li>
+		</ul>
+		<span class="navbar-text">
+			<a href="https://www.youtube.com/watch?v=o_i4Ih4ZR24" style="color:gray;">로그인</a>&nbsp;
+			<a href="https://www.youtube.com/watch?v=o_i4Ih4ZR24" style="color:gray;">회원가입</a>
+		</span>
+		</div>
+	</nav>
+
+
+	<main>
+
+	<div class="jumbotron" id="j1">
+		
+		<h2>백승규님의 7월 의류 폐기량은 총 <span style="color:red;">63.71 kg</span>입니다.</h2>
+		<h2>평균 대비 <span style="color:red;">11326.3%</span> 많이 배출하였습니다.</h2>
+		<hr>
+		
+	</div>
+
+	<div class="jumbotron" id="j2">
+		
+		<h2>청구 금액: <span style="color:red;">63,710 원</span></h2>
+		<h3><span style="color:red;">3.14 kg</span>의 탄소가 배출되었습니다.</h3>
+		<hr>
+		
+	</div>
+
+
+
+
+	
+
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://yghhyperstupid.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script>
+
+
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
